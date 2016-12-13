@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         mavenCentral()
-        maven { url "https://oss.sonatype.org/content/repositories/comaerisweather-1013" }
+        maven { url "https://oss.sonatype.org/content/repositories/comaerisweather-1020" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.3'
@@ -19,6 +19,7 @@ android {
         versionName "1.5.0"
         multiDexEnabled true
     }
+
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -42,14 +43,14 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
-    dexOptions {
+    dexOptions{
         preDexLibraries = false
     }
 }
 repositories {
     mavenCentral()
     jcenter()
-    maven { url "https://oss.sonatype.org/content/repositories/comaerisweather-1013" }
+    maven { url "https://oss.sonatype.org/content/repositories/comaerisweather-1020" }
 }
 dependencies {
     compile('com.google.android.gms:play-services:9.8.0'){
